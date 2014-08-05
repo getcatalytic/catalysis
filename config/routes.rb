@@ -1,5 +1,6 @@
-Rails.application.routes.draw do
+Catalysis::Engine.routes.draw do
   root to: 'home#index'
-
-  devise_for :users
+  get 'home/index'
+  
+  devise_for :users, class_name: 'Catalysis::User'
 end
